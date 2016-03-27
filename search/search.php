@@ -13,4 +13,11 @@ function curlGet($url) {
 
 function returnXPathObject($item) {
 
+	$xmlPageDom = new DomDocument();
+
+	@$xmlPageDom->loadHTML($item);
+
+	$xmlPagePath = new DOMXPath($xmlPageDom);
+
+	return $xmlPageXPath;
 }
